@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<!-- Basic -->
+		<meta charset="utf-8">
+		<title>{% block title %}Welcome!{% endblock %}</title>		
+
+		<!-- Mobile Metas -->
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        {% include 'inc/stylesheet.php' %}
+        {% block stylesheets %}{% endblock %}
+
+	</head>    
+	<body>
+		<div class="body">
+            {% include 'inc/header.php' %}
+
+			<div role="main" class="main">
+                {% block body %}{% endblock %}
+			</div>
+
+            {% include 'inc/footer.php' %}
+		</div>
+        
+        {% include 'inc/javascript.php' %}
+        {% block javascripts %}{% endblock %}
+	</body>
+</html>
